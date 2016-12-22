@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<!--<img src="{% static "example.jpg" %}" alt="My image"/> 
+
+-->
+<h2>USER REGISTRATION</h2>
+    <form method="post" action="." class="text-error">{% csrf_token %}
+        <table border="0">
+            {{ form.as_table }}
+        </table>
+
+        <h5><a href="">TERMS & CONDITION</a></h5>
+
+        <input type="submit" value="Register" />
+    </form>
+
+
+    <video width="400" controls autoplay>
+  		<source src="{% static "eg.mp4" %}" type="video/mp4">
+  		
+  	</video>
+    
+{% endblock %}
