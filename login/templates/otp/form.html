@@ -4,10 +4,8 @@
 {% block content %}
 {% load staticfiles %}
 
-<video width="400" align="center" controls autoplay>
-  		<source src="{% static "eg.mp4" %}" type="video/mp4">
-  		
- </video>
+  		<!--<source src="{% static "eg.mp4" %}" type="video/mp4">-->
+  		<img src="{% static "eg.gif" %}" alt="My image"/> 
     <form method="post" action=".">{% csrf_token %}
         <table border="0">
             {{ form.as_table }}

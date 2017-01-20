@@ -17,10 +17,14 @@
         <input type="submit" value="Register" />
     </form>
 
-
-    <video width="400" controls autoplay>
+    	
+    <!--<video width="400" preload="true" controls autoplay id="vid">
   		<source src="{% static "eg.mp4" %}" type="video/mp4">
   		
   	</video>
+-->
+  	<script>
+    document.getElementById('vid').play();
+</script>
     
 {% endblock %}

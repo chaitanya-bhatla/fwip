@@ -35,7 +35,7 @@ def get_mac(IP):
 		return 'localhost'
 	mac = re.search(r"(([a-f\d]{1,2}\:){5}[a-f\d]{1,2})", s).groups()[0]
 	return mac
-    
+
 def index(request):
 	ip= get_client_ip(request)
     	mac= get_mac(ip)	
@@ -107,7 +107,10 @@ def otp_form(request):
 				print 'Not registered'
 				return HttpResponseRedirect('/')
 			else:
-				otp=obj[0].OTP
+				print '*************************************************************'
+				for i in obj:
+					print i.OTP
+				otp=obj[len(obj)-1].OTP
 				otp=str(otp)
 				print '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 				print otp

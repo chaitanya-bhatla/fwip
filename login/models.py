@@ -21,6 +21,8 @@ class Post(models.Model):
         return self.title
 
 class Access(models.Model):
+	print 'model access'
+	print '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
 	name=models.CharField(max_length=200)
 	phone=models.CharField(max_length=200)
 	ip=models.CharField(max_length=200)
@@ -29,4 +31,5 @@ class Access(models.Model):
 	
 	def __self__(self):
 		return self.name
-	
+	def __unicode__(self):
+      	        return  self.mac
