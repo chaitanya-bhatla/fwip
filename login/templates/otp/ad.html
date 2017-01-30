@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<center>
+	<div class = "container-fluid">
+		<table class = "container-fluid">
+			<tr>
+				<td ><img src="{% static "add1.jpg" %}" alt="My image"/ style = "height:100%;width:100%"></td> 
+			</tr>
+		</table><br/><br/><br/>
+		<a href="{% url 'otp_form'%}">Continue to Registration</a>	
+	</div>
+</center>
+
+
+
+{% endblock %}

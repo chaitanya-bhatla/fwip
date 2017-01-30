@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+
+<center>
+	<div class = "container-fluid">
+		<!--<source src="{% static "eg.mp4" %}" type="video/mp4">-->
+		<img src="{% static "eg.gif" %}" alt="My image"/ style = "height:500px;width:100%"><br/><br/> 
+	    <form method="post" action=".">{% csrf_token %}
+		<table border="0">
+		    {{ form.as_table }}
+		</table>
+		<input type="submit" value="Register" />
+	    </form>
+	</div>
+</center>   
+{% endblock %}

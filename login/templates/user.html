@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<div class = "container-fluid">
+	<center>
+		<img src="{% static "example.jpg" %}" alt="My image"/> 
+		<h2>USER REGISTRATION</h2>
+		    <form method="post" action="." class="text-error">{% csrf_token %}
+			<table border="0">
+			    {{ form.as_table }}
+			</table>
+
+			<h5><a href="">TERMS & CONDITION</a></h5>
+
+			<input type="submit" value="Register" />
+		    </form>
+	</center>
+</div>
+    	
+    <!--<video width="400" preload="true" controls autoplay id="vid">
+  		<source src="{% static "eg.mp4" %}" type="video/mp4">
+  		
+  	</video>
+-->
+  	<script>
+    document.getElementById('vid').play();
+</script>
+    
+{% endblock %}

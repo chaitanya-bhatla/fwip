@@ -1,0 +1,23 @@
+h1 a {
+    color: #FCA205;
+    text-align: center;
+    padding-left: 15px;
+
+}
+
+
+
+
+
+
+body {
+    background-image: url("../a.jpg");
+    background-color: #FFFFFF;
+    background-repeat:no-repeat;
+    background-size: 1200px;
+    background-position: 1px 1px; 
+    padding-left: 15px;
+
+}
+
+
