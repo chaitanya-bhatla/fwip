@@ -5,16 +5,15 @@
 {% load staticfiles %}
 <div class = "container-fluid">
 	<center>
-		<img src="{% static "example.jpg" %}" alt="My image"/> 
-		<h2>USER REGISTRATION</h2>
+		<img src="{% static "add2.jpg" %}" alt="My image"/style = "height:100%;width:100%"> 
+		<h2>WELCOME TO REGISTRATION</h2>
 		    <form method="post" action="." class="text-error">{% csrf_token %}
 			<table border="0">
-			    {{ form.as_table }}
-			</table>
+		    {{ form.as_table }}
+		</table>
 
 			<h5><a href="">TERMS & CONDITION</a></h5>
-
-			<input type="submit" value="Register" />
+			<input type="submit" value="Click to Register" />
 		    </form>
 	</center>
 </div>

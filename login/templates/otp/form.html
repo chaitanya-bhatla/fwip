@@ -7,7 +7,7 @@
 <center>
 	<div class = "container-fluid">
 		<!--<source src="{% static "eg.mp4" %}" type="video/mp4">-->
-		<img src="{% static "eg.gif" %}" alt="My image"/ style = "height:500px;width:100%"><br/><br/> 
+		<img src="{% static "eg.gif" %}" alt="My image"/ style = "height:100%;width:100%"><br/><br/> 
 	    <form method="post" action=".">{% csrf_token %}
 		<table border="0">
 		    {{ form.as_table }}

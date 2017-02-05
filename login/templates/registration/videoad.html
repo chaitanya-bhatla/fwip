@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function(){
+
+(function(){
+  var counter = 3;
+
+  setInterval(function() {
+    counter--;
+    if (counter >= 0) {
+      span = document.getElementById("count");
+      span.innerHTML = counter;
+    }
+    // Display 'counter' wherever you want to display it.
+    if (counter === 0) {
+        clearInterval(counter);
+    }
+
+  }, 1000);
+
+})();
+
+}
+
+</script>
+</head>
+<center>
+	<div class = "container-fluid">
+		<img class = "animated-gif" src="{% static "eg.gif" %}" style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'><br/><br/>
+	</div>
+	<div class = "container-fluid" id ="skipadd" style = "position:fixed;bottom:0;right:0;">
+		<button type="button" class = "btn btn-default">Skip Add in <span id="count">10</span> seconds...</button> 
+		<meta http-equiv="refresh" content="10;url=/register/success" />
+	</div>	
+</center> 
+{% endblock %}

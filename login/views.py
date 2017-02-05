@@ -36,10 +36,13 @@ def get_mac(IP):
 	mac = re.search(r"(([a-f\d]{1,2}\:){5}[a-f\d]{1,2})", s).groups()[0]
 	return mac
 
-def ads(request):
-	return render_to_response('otp/ad.html')
-	
+def welcome_page(request):
+	return render_to_response('welcome.html')  #this is the page the user will land on.  
 
+def ads(request):
+	return render_to_response('registration/ad.html')
+	
+##actually registration page
 def index(request):
 	ip= get_client_ip(request)
     	mac= get_mac(ip)	
@@ -55,12 +58,15 @@ def index(request):
 			send_message('Your OTP is '+str(OTP),phone)
 			obj.save()
        		##return HttpResponseRedirect('/register/otp/')
-		return HttpResponseRedirect('/register/ads/')
+		return HttpResponseRedirect('/register/videoad/')
 	else:
         	form = AccessForm()
     		variables = RequestContext(request, {'form': form})
 	
 	return render_to_response('user.html',variables,)
+
+def videoad(request):
+	return render_to_response('registration/videoad.html')
 
 
 @csrf_protect
@@ -137,10 +143,6 @@ def otp_form(request):
 def register_success(request):
     return render_to_response(
     'registration/success.html',
-    )
-def otp_success(request):
-    return render_to_response(
-    'otp/success.html',
     )
 
 def otp(request):

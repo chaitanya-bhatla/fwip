@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<center>
+	<div class = "container-fluid" style = "height:100%;width:100%">
+		<table class = "container-fluid">
+			<tr>
+				<td ><img src="{% static "add1.jpg" %}" alt="My image"/ style = "height:80%;width:100%"></td> 
+			</tr>
+		</table><br/>
+		<a href="{% url 'register'%}"><font size="4">Continue to Registration --></font></a>	
+	</div>
+</center>
+
+
+
+{% endblock %}
