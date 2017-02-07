@@ -36,8 +36,11 @@ def get_mac(IP):
 	mac = re.search(r"(([a-f\d]{1,2}\:){5}[a-f\d]{1,2})", s).groups()[0]
 	return mac
 
-def welcome_page(request):
-	return render_to_response('welcome.html')  #this is the page the user will land on.  
+def welcome(request):#this is the page users will land on
+	return render_to_response('welcome.html')
+
+def click_register(request):
+	return render_to_response('click_register.html')  #this is the page for clickregisration 
 
 def ads(request):
 	return render_to_response('registration/ad.html')
